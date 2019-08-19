@@ -1,0 +1,40 @@
+Step: step-credential-initializer-vm6ts:
+
+{"level":"warn","ts":1566237436.138492,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1566237436.1389716,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Step: step-working-dir-initializer-rltft:
+
+{"level":"warn","ts":1566237437.0238893,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1566237437.0286381,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+Step: step-place-tools:
+
+Step: step-git-source-meta-ofpf-environment-wolfroot-pr44c:
+
+{"level":"warn","ts":1566237443.0723827,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1566237443.2336953,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/ofpf/environment-wolfroot-staging.git @ 69fb2f532bf4e740c6ed9a776a61b91579976291 in path /workspace/source"}
+Step: step-git-merge:
+
+{"level":"info","msg":"Using SHAs from PULL_REFS=master:69fb2f532bf4e740c6ed9a776a61b91579976291","time":"2019-08-19T17:57:23Z"}
+{"level":"warning","msg":"no SHAs to merge, falling back to initial cloned commit","time":"2019-08-19T17:57:23Z"}
+Step: step-merge-pull-refs:
+
+SKIP merge-pull-refs: Nothing to merge
+Step: step-create-effective-pipeline:
+
+{"level":"info","msg":"Deleting and cloning the Jenkins X versions repo","time":"2019-08-19T17:57:24Z"}
+{"level":"info","msg":"Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions","time":"2019-08-19T17:57:24Z"}
+{"level":"info","msg":"selected pack: /builder/home/.**/draft/packs/github.com/jenkins-x-buildpacks/jenkins-x-kubernetes/packs/environment","time":"2019-08-19T17:57:25Z"}
+{"level":"info","msg":"Effective pipeline written to jenkins-x-promotion-effective.yml","time":"2019-08-19T17:57:26Z"}
+Step: step-create-tekton-crds:
+
+{"level":"info","msg":"running command: ** step next-version --use-git-tag-only --tag","time":"2019-08-19T17:57:27Z"}
+{"level":"info","msg":"created new version: 0.0.1 and written to file: ./VERSION","time":"2019-08-19T17:57:27Z"}
+{"level":"info","msg":"Tag v0.0.1 created and pushed to remote origin","time":"2019-08-19T17:57:30Z"}
+{"level":"info","msg":"","time":"2019-08-19T17:57:30Z"}
+{"level":"info","msg":"PipelineActivity for ofpf-environment-wolfroot-staging-master-1","time":"2019-08-19T17:57:30Z"}
+{"level":"info","msg":"Applying changes ","time":"2019-08-19T17:57:30Z"}
+{"level":"info","msg":"upserted PipelineResource ofpf-environment-wolfroot-stagi for the git repository https://github.com/ofpf/environment-wolfroot-staging.git and branch master","time":"2019-08-19T17:57:30Z"}
+{"level":"info","msg":"upserted Task ofpf-environment-wolfroot-stagi-jt8vx-from-build-pack-1","time":"2019-08-19T17:57:30Z"}
+{"level":"info","msg":"upserted Pipeline ofpf-environment-wolfroot-stagi-jt8vx-1","time":"2019-08-19T17:57:30Z"}
+{"level":"info","msg":"created PipelineRun ofpf-environment-wolfroot-stagi-jt8vx-1","time":"2019-08-19T17:57:30Z"}
+{"level":"info","msg":"created PipelineStructure ofpf-environment-wolfroot-stagi-jt8vx-1","time":"2019-08-19T17:57:30Z"}
