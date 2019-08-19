@@ -1,0 +1,50 @@
+Step: step-credential-initializer-5gnqn:
+
+{"level":"warn","ts":1566237390.642874,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1566237390.643302,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Step: step-working-dir-initializer-wqlhn:
+
+{"level":"warn","ts":1566237391.511826,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1566237391.5176873,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+Step: step-place-tools:
+
+Step: step-git-source-meta-ofpf-environment-wolfroot-qq96f:
+
+{"level":"warn","ts":1566237396.5886626,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1566237396.7479646,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/ofpf/environment-wolfroot-staging.git @ 686040256f4bebd202c1a26d8c7035dfc7407b5a in path /workspace/source"}
+Step: step-git-merge:
+
+{"level":"info","msg":"Using SHAs from PULL_REFS=master:686040256f4bebd202c1a26d8c7035dfc7407b5a,1:876c2b3618286f8594e4ab4c009a53836fe8d861","time":"2019-08-19T17:56:37Z"}
+{"level":"debug","msg":"ran git fetch --unshallow origin 876c2b3618286f8594e4ab4c009a53836fe8d861: 686040256f4bebd202c1a26d8c7035dfc7407b5a: in ","time":"2019-08-19T17:56:37Z"}
+{"level":"debug","msg":"ran git checkout master in ","time":"2019-08-19T17:56:37Z"}
+{"level":"debug","msg":"ran git reset --hard 686040256f4bebd202c1a26d8c7035dfc7407b5a in ","time":"2019-08-19T17:56:37Z"}
+{"level":"debug","msg":"ran clean --force -d . in ","time":"2019-08-19T17:56:37Z"}
+{"level":"debug","msg":"ran git merge 876c2b3618286f8594e4ab4c009a53836fe8d861 in ","time":"2019-08-19T17:56:37Z"}
+MERGED SHA SUBJECT
+876c2b361  chore: Promote cicd-experiment1 to version 0.0.1
+Step: step-merge-pull-refs:
+
+{"level":"debug","msg":"ran git fetch origin 876c2b3618286f8594e4ab4c009a53836fe8d861: 686040256f4bebd202c1a26d8c7035dfc7407b5a: in ","time":"2019-08-19T17:56:38Z"}
+{"level":"debug","msg":"Unshallowed git repo in ","time":"2019-08-19T17:56:38Z"}
+{"level":"debug","msg":"ran git checkout master in ","time":"2019-08-19T17:56:38Z"}
+{"level":"debug","msg":"ran git reset --hard 686040256f4bebd202c1a26d8c7035dfc7407b5a in ","time":"2019-08-19T17:56:38Z"}
+{"level":"debug","msg":"ran clean --force -d . in ","time":"2019-08-19T17:56:38Z"}
+{"level":"debug","msg":"ran git merge 876c2b3618286f8594e4ab4c009a53836fe8d861 in ","time":"2019-08-19T17:56:38Z"}
+MERGED SHA SUBJECT
+876c2b361  chore: Promote cicd-experiment1 to version 0.0.1
+Step: step-create-effective-pipeline:
+
+{"level":"info","msg":"Deleting and cloning the Jenkins X versions repo","time":"2019-08-19T17:56:39Z"}
+{"level":"info","msg":"Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions","time":"2019-08-19T17:56:39Z"}
+{"level":"info","msg":"selected pack: /builder/home/.**/draft/packs/github.com/jenkins-x-buildpacks/jenkins-x-kubernetes/packs/environment","time":"2019-08-19T17:56:39Z"}
+{"level":"info","msg":"Effective pipeline written to jenkins-x-promotion-build-effective.yml","time":"2019-08-19T17:56:41Z"}
+Step: step-create-tekton-crds:
+
+{"level":"info","msg":"PipelineActivity for ofpf-environment-wolfroot-staging-PR-1-1","time":"2019-08-19T17:56:41Z"}
+{"level":"info","msg":"Applying changes ","time":"2019-08-19T17:56:41Z"}
+{"level":"info","msg":"Checking if batch build reconciling is needed","time":"2019-08-19T17:56:41Z"}
+{"level":"info","msg":"upserted PipelineResource ofpf-environment-wolfroot-stagi for the git repository https://github.com/ofpf/environment-wolfroot-staging.git and branch PR-1","time":"2019-08-19T17:56:41Z"}
+{"level":"info","msg":"upserted Task ofpf-environment-wolfroot-stagi-from-build-pack-1","time":"2019-08-19T17:56:41Z"}
+{"level":"info","msg":"upserted Pipeline ofpf-environment-wolfroot-stagi-1","time":"2019-08-19T17:56:41Z"}
+{"level":"info","msg":"created PipelineRun ofpf-environment-wolfroot-stagi-1","time":"2019-08-19T17:56:41Z"}
+{"level":"info","msg":"created PipelineStructure ofpf-environment-wolfroot-stagi-1","time":"2019-08-19T17:56:41Z"}
